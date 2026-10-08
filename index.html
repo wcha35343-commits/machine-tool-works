@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>国营第三机床厂厂史馆 · 本站首页</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Serif+Display&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#cf3a30;
+  --yellow:#e5ac2b;
+  --blue:#26478f;
+  --purple:#7a3f8c;
+  --olive:#6c7636;
+  --paper:#e9dcbe;
+  --paper2:#f4ecd8;
+  --ink:#241c14;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;
+  font-size:15px;
+  line-height:1.85;
+  overflow-x:hidden;
+  position:relative;
+}
+/* =====  伪纸纹 · 做旧 ===== */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:999;
+  background-image:
+    repeating-linear-gradient(0deg,rgba(120,90,40,.05) 0 1px,transparent 1px 3px),
+    repeating-linear-gradient(90deg,rgba(120,90,40,.04) 0 1px,transparent 1px 4px);
+  mix-blend-mode:multiply;
+  opacity:.9;
+}
+.mono{font-family:"Space Mono","Courier New",monospace;}
+.deco{font-family:"Bungee","DM Serif Display",serif;letter-spacing:.02em;}
+
+/* =====  顶部  ===== */
+.wrap{max-width:960px;margin:0 auto;padding:0 14px 96px;}
+header.top{position:relative;padding:26px 0 8px;min-height:160px;}
+.brand{
+  position:relative;z-index:3;display:inline-block;
+  background:var(--red);color:#fff;padding:10px 16px 12px;
+  transform:rotate(-2.2deg);
+  box-shadow:6px 6px 0 var(--blue);
+  border:2px solid var(--ink);
+}
+.brand h1{
+  margin:0;font-size:27px;line-height:1.06;
+  font-family:"DM Serif Display","Noto Serif SC",serif;
+  letter-spacing:.06em;font-weight:400;
+}
+.brand .sub{
+  display:block;margin-top:4px;font-size:9.5px;letter-spacing:.22em;
+  font-family:"Space Mono",monospace;opacity:.94;
+}
+.dot{position:absolute;border:2px solid var(--ink);z-index:1;}
+.d1{width:58px;height:58px;background:var(--yellow);border-radius:50%;top:12px;right:12px;transform:rotate(8deg);}
+.d2{width:34px;height:74px;background:var(--blue);top:72px;right:66px;transform:rotate(-14deg);}
+.d3{width:86px;height:16px;background:var(--olive);top:128px;right:6px;transform:rotate(5deg);}
+.d4{width:26px;height:26px;background:var(--purple);border-radius:50%;top:6px;left:46%;}
+
+/* =====  搜索  ===== */
+.searcher{
+  position:relative;z-index:5;margin-top:18px;
+  background:var(--blue);border:2px solid var(--ink);
+  padding:12px 12px 14px;transform:rotate(.5deg);
+  box-shadow:5px 5px 0 var(--yellow);
+}
+.searcher label{
+  display:block;color:#fff;font-size:11px;letter-spacing:.2em;
+  font-family:"Space Mono",monospace;margin-bottom:7px;
+}
+.srow{display:flex;gap:8px;}
+.srow input{
+  flex:1;min-width:0;border:2px solid var(--ink);
+  background:var(--paper2);padding:10px 11px;
+  font-size:15px;font-family:"Noto Serif SC",serif;color:var(--ink);
+  border-radius:0;outline:none;
+}
+.srow input:focus{background:#fff;box-shadow:inset 0 0 0 2px var(--yellow);}
+.srow button{
+  border:2px solid var(--ink);background:var(--red);color:#fff;
+  font-family:"Space Mono",monospace;font-size:13px;letter-spacing:.14em;
+  padding:10px 16px;cursor:pointer;border-radius:0;
+}
+.srow button:active{transform:translate(1px,1px);}
+.msg{margin-top:8px;font-size:13px;min-height:20px;font-family:"Space Mono",monospace;color:#ffe9a8;}
+.msg.bad{color:#ffd0c8;}
+
+/* =====  分节  ===== */
+.section{margin-top:26px;position:relative;}
+.tag{
+  display:inline-block;background:var(--ink);color:var(--paper2);
+  font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.22em;
+  padding:3px 10px;
+}
+.intro{background:var(--paper2);border:2px dashed var(--ink);padding:16px;margin-top:8px;}
+.intro .who{font-family:"DM Serif Display",serif;font-size:20px;margin:0 0 8px;color:var(--blue);}
+
+/* 公告 = 标语横幅感 */
+.board{
+  background:var(--yellow);border:2px solid var(--ink);
+  padding:16px;margin-top:8px;transform:rotate(-.6deg);
+  box-shadow:6px 6px 0 rgba(38,71,143,.85);
+}
+.board p{margin:0 0 10px;}
+.board p:last-child{margin-bottom:0;}
+.hl{background:rgba(207,58,48,.24);padding:0 3px;font-weight:600;}
+.banner{
+  display:block;background:var(--red);color:#fff;border:2px solid var(--ink);
+  font-family:"DM Serif Display","Noto Serif SC",serif;
+  font-size:15px;letter-spacing:.3em;text-align:center;
+  padding:7px 4px;margin:0 0 12px;transform:rotate(-.8deg);
+  box-shadow:4px 4px 0 var(--blue);
+}
+
+/* 时间线 */
+.timeline{list-style:none;margin:10px 0 0;padding:0;border-left:3px solid var(--ink);}
+.timeline li{position:relative;padding:0 0 13px 18px;}
+.timeline li::before{
+  content:"";position:absolute;left:-8px;top:7px;width:11px;height:11px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--red);
+}
+.timeline .yr{font-family:"Space Mono",monospace;font-size:13px;color:var(--red);font-weight:700;letter-spacing:.05em;}
+.timeline .ev{font-size:14px;color:#4a3f2d;}
+.timeline li.blank::before{background:var(--ink);border-color:var(--ink);}
+.timeline li.blank .ev{color:#8a7550;}
+.timeline li.blank{background:rgba(207,58,48,.12);margin-left:-6px;padding-left:24px;border-left:0;}
+
+/* 荣誉墙 */
+.wall{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px;}
+.award{
+  border:2px solid var(--ink);background:var(--paper2);
+  padding:8px 10px;position:relative;overflow:hidden;
+  box-shadow:3px 3px 0 rgba(36,28,20,.35);
+}
+.award:nth-child(odd){transform:rotate(-1deg);}
+.award:nth-child(even){transform:rotate(1deg);}
+.award .ay{font-family:"Space Mono",monospace;font-size:11px;color:var(--red);letter-spacing:.06em;}
+.award .an{font-family:"DM Serif Display","Noto Serif SC",serif;font-size:16px;letter-spacing:.08em;margin-top:2px;}
+.award .an.miss{color:#a99a76;}
+.award .an.miss::after{content:"（暂缺）";font-size:11px;letter-spacing:.02em;}
+.award::after{
+  content:"先进工作者";position:absolute;right:-1px;bottom:-1px;
+  font-size:9px;letter-spacing:.14em;color:#fff;background:var(--red);
+  padding:2px 7px 2px 9px;
+}
+.award.miss-award::after{background:#a99a76;}
+
+.contact{
+  background:var(--purple);color:#f6ead2;border:2px solid var(--ink);
+  padding:15px;margin-top:8px;transform:rotate(.7deg);
+  font-family:"Space Mono",monospace;font-size:12.5px;line-height:2;
+}
+.contact b{color:#ffd98a;font-weight:normal;}
+
+/* =====  页脚  ===== */
+footer{margin-top:40px;border-top:3px double var(--ink);padding-top:14px;font-size:11.5px;color:#57492f;}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;}
+footer .mono{font-size:11px;}
+
+/* =====  隐藏页  ===== */
+.page{display:none;}
+.page.on{display:block;animation:fade .34s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+.doc{
+  background:var(--paper2);border:2px solid var(--ink);
+  margin-top:22px;position:relative;
+  box-shadow:8px 8px 0 var(--purple);
+}
+.doc-bar{
+  background:var(--ink);color:var(--yellow);
+  font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.2em;
+  padding:6px 12px;display:flex;justify-content:space-between;gap:8px;
+}
+.doc-body{padding:16px 16px 20px;}
+.doc h2{
+  font-family:"DM Serif Display","Noto Serif SC",serif;
+  font-size:22px;margin:0 0 4px;color:var(--red);line-height:1.28;
+}
+.doc .rule{display:inline-block;width:52px;height:5px;background:var(--blue);margin:2px 0 14px;}
+.doc p{margin:0 0 12px;}
+.note{
+  border-left:6px solid var(--olive);background:rgba(108,118,54,.12);
+  padding:10px 12px;margin:14px 0;
+}
+.paperclip{
+  display:inline-block;background:var(--red);color:#fff;
+  font-family:"Space Mono",monospace;font-size:12px;
+  padding:2px 8px;transform:rotate(-2deg);margin:0 4px 8px 0;
+}
+table.ledger{width:100%;border-collapse:collapse;font-family:"Space Mono",monospace;font-size:11.5px;margin:12px 0;}
+table.ledger th,table.ledger td{border:1px solid #a4906a;padding:6px 7px;text-align:left;}
+table.ledger th{background:var(--yellow);font-weight:normal;}
+table.ledger tr:nth-child(even) td{background:rgba(233,220,190,.6);}
+.pagetag{margin-top:18px;text-align:right;font-family:"Bungee",monospace;font-size:13px;letter-spacing:.16em;color:var(--purple);}
+.backbtn{
+  display:inline-block;margin-top:14px;border:2px solid var(--ink);
+  background:var(--olive);color:#fff;font-family:"Space Mono",monospace;
+  font-size:12px;letter-spacing:.14em;padding:8px 14px;cursor:pointer;border-radius:0;
+}
+.backbtn:active{transform:translate(1px,1px);}
+
+/* 档案袋 */
+.folder{
+  border:2px solid #a08a5c;background:linear-gradient(#e7d9bb,#dfd0af);
+  padding:16px 14px 14px;margin:16px 0;position:relative;
+  box-shadow:3px 4px 0 rgba(60,50,35,.2);
+}
+.folder::before{
+  content:attr(data-tab);position:absolute;top:-2px;left:14px;transform:translateY(-100%);
+  background:#d9c8a3;border:2px solid #a08a5c;border-bottom:0;
+  font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.1em;color:#5c4b2c;padding:2px 10px;
+}
+.folder .fld-line{font-size:13.5px;color:#5c4f37;margin:4px 0;}
+.folder .fld-no{font-family:"Space Mono",monospace;font-size:11px;color:#7c6a48;letter-spacing:.06em;}
+
+/* 奖状框 */
+.cert{
+  border:3px double var(--red);background:#fdfbf4;
+  padding:18px 16px;text-align:center;margin:16px 0;position:relative;
+  box-shadow:0 0 0 6px #fdfbf4,0 0 0 8px var(--ink);
+}
+.cert .ct-h{font-family:"DM Serif Display","Noto Serif SC",serif;font-size:19px;letter-spacing:.3em;color:var(--red);}
+.cert .ct-b{font-family:"Noto Serif SC",serif;font-size:14.5px;margin:12px auto;max-width:30em;line-height:2;}
+.cert .ct-s{font-family:"Space Mono",monospace;font-size:11px;color:#8a7550;letter-spacing:.05em;}
+.cert .ct-seal{
+  position:absolute;right:12px;bottom:8px;width:58px;height:58px;border:3px solid rgba(163,49,42,.72);
+  border-radius:4px;color:rgba(163,49,42,.82);transform:rotate(-9deg);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Noto Serif SC",serif;font-size:11px;line-height:1.1;font-weight:700;text-align:center;
+}
+/* 手写便条 */
+.hand{
+  font-family:"Noto Serif SC",serif;font-size:15px;line-height:2.05;color:#3a352b;
+  background:#f6f1e2;border-left:3px solid #cbb98c;padding:14px 15px;margin:14px 0;
+  transform:rotate(-.4deg);
+}
+/* 涂黑 */
+.redact{background:#2a2723;color:transparent;padding:0 14px;user-select:none;letter-spacing:0;}
+/* 藏头大字 */
+.acro{font-size:1.5em;color:var(--red);font-weight:700;line-height:1;}
+/* 圈住 */
+.ring{border:2px solid var(--red);border-radius:20px;padding:0 6px;color:var(--red);font-weight:700;}
+/* 高亮下一把钥匙 */
+.key{background:linear-gradient(transparent 58%,rgba(229,172,43,.75) 58%);padding:0 1px;}
+.blist{margin:10px 0;padding-left:20px;}
+.blist li{margin:5px 0;}
+
+/* =====  编号门  ===== */
+.gate{border:2px dashed var(--red);background:#fff;padding:14px;margin:16px 0 8px;}
+.gate label{display:block;font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--red);margin-bottom:8px;}
+.gate .ghint{font-size:12px;color:#7a6a4a;margin-top:8px;font-family:"Space Mono",monospace;}
+.gate .gmsg{margin-top:8px;font-size:13px;font-family:"Space Mono",monospace;min-height:18px;color:var(--olive);}
+.gate .gmsg.bad{color:var(--red);}
+.locked-tag{
+  display:inline-block;background:var(--red);color:#fff;
+  font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.15em;
+  padding:2px 7px;transform:rotate(-1.5deg);
+}
+
+/* =====  记录本  ===== */
+.nbtab{
+  position:fixed;right:10px;bottom:12px;z-index:1000;
+  background:var(--yellow);color:var(--ink);border:2px solid var(--ink);
+  font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;
+  padding:9px 12px;cursor:pointer;border-radius:0;
+  transform:rotate(-1.6deg);box-shadow:4px 4px 0 var(--red);
+}
+.nbtab:active{transform:translate(1px,1px) rotate(-1.6deg);}
+.nbtab b{font-family:"Bungee",monospace;font-weight:normal;}
+.nbpanel{
+  position:fixed;inset:auto 0 0 0;z-index:1001;max-height:78vh;overflow-y:auto;
+  background:var(--paper2);border-top:3px solid var(--ink);
+  box-shadow:0 -8px 0 rgba(38,71,143,.5);
+  transform:translateY(105%);transition:transform .28s ease;
+  padding:16px 16px 26px;
+}
+.nbpanel.open{transform:none;}
+.nbhead{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:3px double var(--ink);padding-bottom:8px;margin-bottom:12px;}
+.nbhead h3{margin:0;font-family:"DM Serif Display",serif;font-size:20px;color:var(--red);}
+.nbhead .cls{border:2px solid var(--ink);background:var(--red);color:#fff;font-family:"Space Mono",monospace;font-size:12px;padding:5px 10px;cursor:pointer;border-radius:0;}
+.nbcols{display:grid;grid-template-columns:1fr;gap:16px;}
+.nbcol h4{margin:0 0 8px;font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.16em;color:var(--blue);background:rgba(38,71,143,.12);padding:3px 8px;display:inline-block;}
+.nblist{list-style:none;margin:0;padding:0;}
+.nblist li{font-size:13px;padding:5px 0;border-bottom:1px dashed #b9a877;display:flex;justify-content:space-between;gap:10px;}
+.nblist li .num{font-family:"Space Mono",monospace;font-size:11px;color:var(--purple);}
+.nbkill{margin-top:16px;border:2px solid var(--ink);background:var(--paper);font-family:"Space Mono",monospace;font-size:11.5px;color:var(--ink);padding:7px 12px;cursor:pointer;border-radius:0;}
+.nboverlay{position:fixed;inset:0;background:rgba(36,28,20,.42);z-index:1000;display:none;}
+.nboverlay.on{display:block;}
+
+@media (min-width:820px){
+  body{font-size:16px;}
+  .wrap{max-width:880px;padding:0 24px 96px;}
+  header.top{min-height:176px;padding-top:36px;}
+  .brand h1{font-size:40px;}
+  .d1{width:80px;height:80px;right:58px;}
+  .d2{width:46px;height:100px;top:90px;right:132px;}
+  .d3{width:126px;height:20px;top:156px;right:28px;}
+  .searcher{padding:16px 18px 18px;max-width:640px;}
+  .wall{grid-template-columns:repeat(4,1fr);gap:12px;}
+  .doc h2{font-size:27px;}
+  .doc-body{padding:24px 28px 30px;}
+  .doc-body p{max-width:44em;}
+  .two-col{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:start;}
+  .nbpanel{inset:auto 20px 20px auto;width:520px;border:2px solid var(--ink);box-shadow:9px 9px 0 var(--red);max-height:72vh;border-radius:0;}
+  .nbcols{grid-template-columns:1fr 1fr;}
+  .nboverlay{display:none !important;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="dot d1"></div>
+    <div class="dot d2"></div>
+    <div class="dot d3"></div>
+    <div class="dot d4"></div>
+    <div class="brand">
+      <h1>第三机床厂 · 厂史馆</h1>
+      <span class="sub">NO.3 MACHINE TOOL WORKS · FACTORY HISTORY ARCHIVE · EST.1958</span>
+    </div>
+  </header>
+
+  <div class="searcher">
+    <label>站内检索 / SEARCH</label>
+    <div class="srow">
+      <input id="q" type="text" placeholder="输入你想查的内容……" autocomplete="off">
+      <button id="go">检索</button>
+    </div>
+    <div class="msg" id="msg"></div>
+  </div>
+
+  <!-- ================= 首页 ================= -->
+  <div class="page on" id="home">
+    <div class="section">
+      <span class="tag">关于本站</span>
+      <div class="intro">
+        <p class="who">你在找那一页。</p>
+        <p>三个月前，你在旧书市买到一册《第三机床厂厂志（1958—2002）》。翻到 1996 年，那一页被人齐齐裁去了——装订线还新，切口却平整得不像话。扉页上有人用铅笔写了一行小字：「问一问他。他还在这厂里。」</p>
+        <p>于是你找到了这里：<strong>国营第三机床厂厂史馆</strong>的官方网站。厂子 2003 年改制，2015 年停产，2019 年在原址建了这座馆。这里存着厂子六十年的文件、照片和奖状。</p>
+        <p>本站没有菜单，也没有目录。你能查的东西不多：公告、大事记、荣誉墙。听说，只要在检索框里输入对的词，本站就会翻开一页没写在门户上的内容。至于那个词是什么，没人会告诉你。</p>
+        <p style="font-size:12.5px;color:#5a4b35;">（提示：这里的每一页，都可能藏着下一个词。读完再想，别指望它自己跳出来。）</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="tag">公告栏</span>
+      <div class="board">
+        <div class="banner">存 史 · 留 名 · 续 脉</div>
+        <p>· 本馆 2019 年在原址落成开放，现藏档案 4213 卷、照片 5602 帧、实物 318 件。部分卷宗在移交中断，存在<span class="hl">编号缺页</span>，本馆正在补录。—— 厂史馆资料室</p>
+        <p>· 荣誉墙依据现存《先进工作者审批表》建档，<span class="hl">1996 年度名录暂缺</span>，欢迎老职工及家属提供线索。</p>
+        <p>· 大事记 1996 年条目系据厂房科移交材料补录，原始油印稿见本馆档案，编号 3J-1996-○○。</p>
+        <p>· 本站由厂信息中心维护，长期无专人打理，如有错漏，望谅解。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="tag">大事记 · 1958—2019</span>
+      <ul class="timeline">
+        <li><span class="yr">1958</span> <span class="ev">第三机床厂破土动工，同年铸出第一台铣床。</span></li>
+        <li><span class="yr">1966</span> <span class="ev">三车间扩建，成为全厂学徒培养与夜班值守的中心车间。</span></li>
+        <li><span class="yr">1978</span> <span class="ev">年产量首次突破三千台，获省机械工业局通报表彰。</span></li>
+        <li><span class="yr">1989</span> <span class="ev">TX-2 型铣床获省优质产品称号。</span></li>
+        <li class="blank"><span class="yr">1996</span> <span class="ev">厂区进行设备更新。（※ 原始条目仅此一句）</span></li>
+        <li><span class="yr">2003</span> <span class="ev">工厂完成股份制改造，更名「三机精工机械股份有限公司」。</span></li>
+        <li><span class="yr">2015</span> <span class="ev">老厂区整体停用，设备陆续迁出。</span></li>
+        <li><span class="yr">2019</span> <span class="ev">厂史馆在原址落成开放。</span></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <span class="tag">荣誉墙 · 先进工作者名录</span>
+      <div class="wall">
+        <div class="award"><div class="ay">1985 年度</div><div class="an">郑长顺</div></div>
+        <div class="award"><div class="ay">1988 年度</div><div class="an">冯桂芝</div></div>
+        <div class="award"><div class="ay">1991 年度</div><div class="an">冯桂芝</div></div>
+        <div class="award"><div class="ay">1993 年度</div><div class="an">周德海</div></div>
+        <div class="award"><div class="ay">1995 年度</div><div class="an">冯桂芝</div></div>
+        <div class="award miss-award"><div class="ay">1996 年度</div><div class="an miss">　</div></div>
+        <div class="award miss-award"><div class="ay">1997 年度</div><div class="an miss">　</div></div>
+      </div>
+      <p style="font-size:12px;color:#5a4b35;margin-top:10px;">说明：名单自 1996 年中断。不是那年没人当先进，是没人再报上来。</p>
+    </div>
+
+    <div class="section">
+      <span class="tag">联系方式</span>
+      <div class="contact">
+        地址：<b>城北工业区中兴路 3 号</b>（原三车间旧址）<br>
+        咨询电话：<b>0000-88194 转 资料室</b><br>
+        开放时间：周二至周日 9:00 — 16:30（周一闭馆）<br>
+        资料查阅：需提前三个工作日申请
+      </div>
+    </div>
+
+    <footer>
+      <div class="row">
+        <span class="mono">国营第三机床厂厂史馆 © 2019 — 2026</span>
+        <span class="mono">本网站由厂信息中心维护 · 最后更新 2019.05.18</span>
+      </div>
+      <div class="row" style="margin-top:6px;">
+        <span class="mono">网站标识码 0000000003 · 备案号 示例备 2019-0000 号</span>
+        <span class="mono">档案 00 / 26</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= 隐藏页容器 ================= -->
+  <div class="page" id="doc"></div>
+
+</div>
+
+<button class="nbtab" id="nbTab">我的记录 <b id="nbCount">0</b></button>
+<div class="nboverlay" id="nbOverlay"></div>
+<div class="nbpanel" id="nbPanel">
+  <div class="nbhead">
+    <h3>我的记录 · 笔记本</h3>
+    <button class="cls" id="nbClose">合上</button>
+  </div>
+  <div class="nbcols">
+    <div class="nbcol">
+      <h4>已找到的档案</h4>
+      <ul class="nblist" id="nbPages"><li style="color:#7a6a4a;">还没有翻到任何一页。</li></ul>
+    </div>
+    <div class="nbcol">
+      <h4>试过的关键词</h4>
+      <ul class="nblist" id="nbKeys"><li style="color:#7a6a4a;">还没有检索过。</li></ul>
+    </div>
+  </div>
+  <button class="nbkill" id="nbKill">擦掉这本记录（清空重来）</button>
+</div>
+
+<script>
+(function(){
+  var TOTAL = 26;
+
+  /* ============ 页面数据（键 = 检索词） ============ */
+  var PAGES = {
+    /* ---------- 第一层 · 厂与车间 ---------- */
+    "第三机床厂": { n:1, t:"厂史馆开馆说明", body:
+      '<p>「问一问他。他还在这厂里。」——你在旧书市那册厂志扉页上读到的这句话，把你带到了这里。既然来了，就先从门口看起。</p>'+
+      '<p>这里保存的，是<span class="key">第三机床厂</span>自 1958 年建厂以来的档案。建馆的初衷很朴素：工厂 2003 年改制，2015 年停产，机器都搬走了，总得有个地方，替那些人记住他们干过什么。</p>'+
+      '<p>馆藏里最重的一份，压着一个铁皮柜；最轻的一份，是缺了一角的几页纸。馆员说，那种缺角的卷宗，不止一份。</p>'+
+      '<div class="folder" data-tab="馆藏统计"><div class="fld-no">SC-STAT-01 · 截至 2019</div>'+
+      '<div class="fld-line">档案 4213 卷 · 照片 5602 帧 · 实物 318 件</div>'+
+      '<div class="fld-line">最近一次补录：2019 年 3 月，由一位退休职工提供。</div></div>'+
+      '<p>如果你手上也有线索，请从最基础的名字查起。比如，这厂子自己叫什么。</p>'
+    },
+
+    "三车间": { n:2, t:"三车间 · 全厂最早的教学车间", body:
+      '<p>在全厂七个车间里，三车间资历最老，也最不起眼——它不出成绩，它出人。</p>'+
+      '<p>三车间始建于建厂之初，1966 年扩建，是全厂学徒培养与夜班值守的中心车间。老工人管它叫「学校」，因为八级工大多从这里走出去。谁家孩子进厂，都先在三车间跟一年师傅。</p>'+
+      '<p>车间实行三班倒，其中夜班由技术骨干带班。1996 年前后，随着设备更新计划推进，三车间的老机床陆续被替换，一批老工人也随之调整了岗位。</p>'+
+      '<div class="folder" data-tab="车间建置沿革"><div class="fld-no">3J-1966-04</div>'+
+      '<div class="fld-line">1966 年扩建后定名「第三车间」，俗称三车间；</div>'+
+      '<div class="fld-line">承担项目：学徒培训 / 精密铣削 / 夜班值守；</div>'+
+      '<div class="fld-line">历任车间主任：郑长顺、李文彬、宋广田……</div></div>'+
+      '<p>1996 年那次设备更新，厂里发的通告还在。想弄明白那年的空缺，或许该先看看那份通告是怎么写的——厂里给它起的正式名字，和外面说的不太一样。</p>'
+    },
+
+    "设备更新": { n:3, t:"关于第三车间设备更新（技改）的通知", body:
+      '<p>这是原件扫描。纸边有装订孔，右下角盖的是厂办章。</p>'+
+      '<div class="folder" data-tab="厂办文件"><div class="fld-no">三机厂〔1996〕字第 87 号 · 3J-1996-1007</div>'+
+      '<p style="text-align:center;font-weight:700;">关于第三车间设备更新（技改）的通知</p>'+
+      '<p>各科室、各车间：<br>经厂务会研究决定，自 1996 年 11 月起，对第三车间实施设备更新（<strong>技改</strong>），引进数控铣床三台，原有旧式铣床分批停用。技改期间，三车间<span class="key">夜班</span>轮值照常，检修作业另行安排。</p>'+
+      '<p>望各部门顾全大局，抓紧落实，确保年底创优评级工作不受影响。</p>'+
+      '<div class="fld-no" style="text-align:right;">国营第三机床厂厂部办公室　1996 年 10 月 7 日</div></div>'+
+      '<p>通知只有一页。注意最后一句——「确保年底创优评级工作不受影响」。这句话，那一年在别的文件里也反复出现过。</p>'+
+      '<p>技改是 11 月启动的。那就顺着 11 月往下查：那段时间，三车间的夜班是怎么排的？</p>'
+    },
+
+    "夜班": { n:4, t:"三车间夜班轮值表（残页）", body:
+      '<p>一张油印的轮值表，纸张发黄，左下角被裁去了一小块。</p>'+
+      '<div class="folder" data-tab="三车间 · 1996 年 11 月 第 2 周"><div class="fld-no">3J-1996-1114-P</div>'+
+      '<div class="fld-line">11.11（一）夜班带班：冯桂芝</div>'+
+      '<div class="fld-line">11.12（二）夜班带班：冯桂芝</div>'+
+      '<div class="fld-line">11.13（三）夜班带班：冯桂芝</div>'+
+      '<div class="fld-line">11.14（四）夜班带班：<span class="redact">冯桂芝 周德海</span></div>'+
+      '<div class="fld-line">11.15（五）夜班带班：<span class="redact">████████████</span></div>'+
+      '<div class="fld-line">11.16（六）休息</div>'+
+      '<div class="fld-line" style="font-size:12px;color:#7c6a48;">批注：本月先进工作者推荐名单，另见荣誉墙。</div></div>'+
+      '<p>11 月 14 日那一栏，有两个名字叠在一起，像是后补上去的。而 15 日整行被涂黑了——不是没写，是不让人看。</p>'+
+      '<p>批注把话头引到了荣誉墙。墙上的年度名单，或许能对上什么。</p>'
+    },
+
+    "先进工作者": { n:5, t:"先进工作者名录（1985—1995）", body:
+      '<p>荣誉墙上的名字是烫金的，可名单本身是打印的——一页一页，从 1985 年排到 1995 年，然后停住了。</p>'+
+      '<table class="ledger"><tr><th>年度</th><th>姓名</th><th>年度</th><th>姓名</th></tr>'+
+      '<tr><td>1985</td><td>郑长顺</td><td>1991</td><td>冯桂芝</td></tr>'+
+      '<tr><td>1986</td><td>王秀兰</td><td>1992</td><td>王秀兰</td></tr>'+
+      '<tr><td>1987</td><td>宋广田</td><td>1993</td><td>周德海</td></tr>'+
+      '<tr><td>1988</td><td>冯桂芝</td><td>1994</td><td>宋广田</td></tr>'+
+      '<tr><td>1989</td><td>周德海</td><td>1995</td><td>冯桂芝</td></tr>'+
+      '<tr><td>1990</td><td>李文彬</td><td>1996</td><td>——</td></tr></table>'+
+      '<p>冯桂芝的名字出现了三次。三车间、八级铣工、带夜班——荣誉墙和刚才那张轮值表，在这里对上了。</p>'+
+      '<p>可 1996 年之后，名单是空的。馆员说，1996 年那批审批表没有移交过来。同一年，厂办还发过一份性质不太一样的文件——是一份关于<strong>取消某人称号、并把他从册子里划掉</strong>的决定。那种处理，老档案里有个专门的说法。</p>'
+    },
+
+    "除名": { n:6, t:"关于取消先进工作者称号并予以处理的决定", body:
+      '<p>这份决定书上的名字，被一大块墨渍盖住了。看得出有人反复涂过，纸都磨薄了。</p>'+
+      '<div class="folder" data-tab="厂办文件"><div class="fld-no">三机厂〔1996〕字第 103 号 · 3J-1996-1220-C</div>'+
+      '<p style="text-align:center;font-weight:700;">关于取消 <span class="redact">██</span> 先进工作者称号并予以处理的决定</p>'+
+      '<p>经研究，<span class="redact">██</span>同志在 11·14 事故中负有一定责任，情节较为严重。为严肃厂纪、教育本人，决定取消其 1996 年度先进工作者称号，并自即日起予以<span class="key">除名</span>，另行安排工作。</p>'+
+      '<p>望全厂职工引以为戒，杜绝违规操作，确保年终各项评比顺利进行。</p>'+
+      '<div class="fld-no" style="text-align:right;">国营第三机床厂厂部办公室　1996 年 12 月 20 日</div></div>'+
+      '<p>名字被涂了，可编号还在，卷宗也还在。决定书末尾有一行小字：「本件原件及事故材料一并归<strong>老档案室</strong>，编号 3J-1996-0114。」</p>'+
+      '<p>如果你想知道 11 月 14 日到底发生了什么，就得去老档案室，看看那份卷宗被谁借走过。</p>'
+    },
+
+    "老档案": { n:7, t:"老档案室借阅登记簿（1997—2015）", body:
+      '<p>一本硬壳登记簿，蓝黑墨水，字迹从工整写到潦草，中间有几页的墨色明显更深——那是被反复翻过的年份。</p>'+
+      '<table class="ledger"><tr><th>日期</th><th>卷宗号</th><th>借阅人</th><th>归还</th></tr>'+
+      '<tr><td>1997.03.11</td><td>3J-1996-0114</td><td>周德海（安全科）</td><td>次日</td></tr>'+
+      '<tr><td>1997.05.06</td><td>3J-1996-0114</td><td>周德海（安全科）</td><td>次日</td></tr>'+
+      '<tr><td>1999.09.02</td><td>3J-1996-0114、1220</td><td>周德海</td><td>——</td></tr>'+
+      '<tr><td>2001.04.17</td><td>3J-1996-0114</td><td><span class="key">周德海</span></td><td>——</td></tr>'+
+      '<tr><td>2015.06.30</td><td>3J-1996-0114</td><td>周德海</td><td>——</td></tr></table>'+
+      '<p>末页批注（另一支笔）：此卷频繁调阅，另存一份副本，原件不再外借。</p>'+
+      '<p>同一个人，借了同一份卷宗十几年。周德海——1993 年的先进工作者，那时候在安全科。</p>'+
+      '<p>一个管安全的科员，为什么要一遍遍地看一份事故材料？登记簿没写。但借阅人自己，也许留下过别的东西。</p>'
+    },
+
+    /* ---------- 第二层 · 那一年那一天 ---------- */
+    "周德海": { n:8, t:"周德海：工作记录便条（残）", body:
+      '<p>夹在一本泛黄的工作日志里，只有一页。字是钢笔写的，划改很多处。</p>'+
+      '<div class="hand">'+
+      '那天晚上机器就有响动，我报过，说是等技改一起停。<br>'+
+      '11 月 14 日，夜班。响声大了，我伸手去够进给手柄，冯师傅一把把我推出去——<br>'+
+      '再睁眼，他的手在滴血，机器还在转。<br>'+
+      '<span style="text-decoration:line-through;">是我操作失误</span>　不是。谁都知道不是。<br><br>'+
+      '后来那纸决定上，写的是他违规。我说了不是，没人听。<br>'+
+      '那年厂里要评优。出事故，评不上。评不上，全厂几千号人的奖金就没了。<br>'+
+      '所以他认了。他跟我说：「你还年轻，别记这个。记着我这份就行。」<br><br>'+
+      '<strong>1996 年 11 月 14 日</strong>，这个日子我一天都没忘。我把材料都留着，总有人会想看。'+
+      '</div>'+
+      '<p>便条没有署名，但从笔迹和内容看，是周德海。他把真相写在了这里，却把材料锁进了档案室。</p>'+
+      '<p>要把它翻出来，得从那个日子查起。</p>'
+    },
+
+    "1996": { n:9, t:"1996 年大事记（原始油印稿）", body:
+      '<p>这就是厂志里被裁去的那一页的原稿。油印机压的，纸薄得透光，下半截被整齐撕掉。</p>'+
+      '<div class="folder" data-tab="1996 年大事记（稿）"><div class="fld-no">3J-1996-DSJ</div>'+
+      '<div class="fld-line">1 月　厂务会部署年度创优工作。</div>'+
+      '<div class="fld-line">4 月　TX-2 型铣床通过省级复检。</div>'+
+      '<div class="fld-line">8 月　技改立项，报机械工业局备案。</div>'+
+      '<div class="fld-line">11 月　三车间设备更新启动。</div>'+
+      '<div class="fld-line">11 月 14 日　三车间——</div>'+
+      '<div class="fld-line" style="color:#8a7550;font-size:12px;">（以下被撕去）</div></div>'+
+      '<p>撕口很齐，是裁纸刀切的，不是手撕的。跟你在旧书市那册厂志上看到的切口，一模一样。</p>'+
+      '<p>被撕掉的那句话，是 11 月 14 日的记录。按理说，这种日子在档案里不会没有下落——厂里对一起事故，是要出报告的。</p>'
+    },
+
+    "事故报告": { n:10, t:"11·14 三车间事故报告", body:
+      '<p>编号 3J-1996-0114，就是周德海借了十几年的那一份。原件已不再外借，这是复本。</p>'+
+      '<div class="folder" data-tab="事故报告"><div class="fld-no">3J-1996-0114 · 1996 年 11 月 18 日</div>'+
+      '<div class="fld-line"><strong>事故经过：</strong>1996 年 11 月 14 日夜班，三车间一台旧式铣床运转中发生异响，操作工周德海处置时，右手接近旋转部位，带班工人冯桂芝将其推开，本人右手被工件划伤。</div>'+
+      '<div class="fld-line"><strong>伤情：</strong>周德海轻伤；冯桂芝右手掌裂伤，缝合十一针。</div>'+
+      '<div class="fld-line"><strong>原因认定：</strong>冯桂芝在设备运转中违规伸手，是造成本人受伤的直接原因，负主要责任。周德海无责。</div>'+
+      '<div class="fld-line"><strong>处理建议：</strong>取消年度评优资格，调离三车间。</div>'+
+      '<div class="fld-line" style="font-size:12px;color:#7c6a48;">——报告只写了「违规伸手」，没写那台机器在技改前就一直在响。</div></div>'+
+      '<p>「违规伸手」四个字，把救人写成了犯错。而真正对着那台老机器报过修的人，是安全科的周德海——这句话，报告里一个字也没有。</p>'+
+      '<p>报告的处理建议是「调离三车间」。厂里是照办的。那份调令，也留了下来。</p>'
+    },
+
+    "调令": { n:11, t:"关于冯桂芝同志工作调动的通知", body:
+      '<p>一页薄薄的调令。手续齐全，措辞规范，看不出任何情绪。</p>'+
+      '<div class="folder" data-tab="人事科文件"><div class="fld-no">三机厂人字〔1997〕字第 006 号 · 3J-1997-0125</div>'+
+      '<p style="text-align:center;font-weight:700;">关于冯桂芝同志工作调动的通知</p>'+
+      '<p>经研究决定，调<strong>冯桂芝</strong>同志至厂后勤仓库工作，自 1997 年 1 月 26 日起执行。望两部门做好交接。</p>'+
+      '<div class="fld-no" style="text-align:right;">国营第三机床厂人事科　1997 年 1 月 25 日</div></div>'+
+      '<p>从三车间的铣工骨干，到后勤仓库，一纸调令，一句解释都没有。</p>'+
+      '<p>调令上第一行，写的就是这个人的名字。荣誉墙上有过三次的名字——现在，该从人事档案里把她找出来看看了。</p>'
+    },
+
+    "冯桂芝": { n:12, t:"职工档案卡：冯桂芝", body:
+      '<p>一张硬卡，右上角贴照片的位置是空的——照片在移交时掉了，只剩一圈发黄的胶痕。</p>'+
+      '<div class="folder" data-tab="职工档案卡"><div class="fld-no">3J-1968-PC</div>'+
+      '<div class="fld-line">姓名：<strong>冯桂芝</strong>　性别：女　出生：1950 年</div>'+
+      '<div class="fld-line">入厂：<strong>1968 年 9 月</strong>　工种：铣工</div>'+
+      '<div class="fld-line">技术等级：八级（1985 年评定）</div>'+
+      '<div class="fld-line">先进工作者：1988 / 1991 / 1995</div>'+
+      '<div class="fld-line">带徒：累计 17 人，含安全科 周德海</div>'+
+      '<div class="fld-line">岗位变动：1996.11 三车间 → 1997.01 后勤仓库</div>'+
+      '<div class="fld-line" style="font-size:12px;color:#7c6a48;">末次登录：1996 年 11 月。此后本卡无新增记录。</div></div>'+
+      '<p>带徒那一栏，写着周德海的名字。便条里那声「冯师傅」，原来是这样来的。</p>'+
+      '<p>卡片的背面，夹着一封没归档的信，纸很薄，落款是家属。</p>'
+    },
+
+    "家属来信": { n:13, t:"冯桂芝家属来信", body:
+      '<p>信封没贴邮票，是直接送到厂办的。信纸折了三折，字迹是两个人的——母亲写的正楷，和女儿补的一行。</p>'+
+      '<div class="hand">'+
+      '厂领导：<br><br>'+
+      '我是冯桂芝的母亲。她手伤了以后，就没再摸过铣床。她不说，我知道她难受。<br>'+
+      '那年的事，她一句都不肯辩。是我们替她不平：她不是违规，她是把那个小伙子推开了。<br>'+
+      '她跟我说，那时候全厂都在等着评优，事情闹大了，谁也拿不到奖金。她说算了，反正她年纪也大了。<br><br>'+
+      '我们不是要什么，只求厂里能还她一个<span class="key">清白</span>。哪怕就写在纸上。<br><br>'+
+      '<span style="font-size:13px;color:#7c6a48;">妈，信我来寄。——女儿</span><br>'+
+      '<span class="mono" style="font-size:11px;">1998 年 3 月</span>'+
+      '</div>'+
+      '<p>这封信送到厂办之后，似乎没有立刻得到答复。但同一年，安全科有人做了一件事——他提交了一份申请，那种申请，是要求把已经定下的结论翻过来重查。</p>'
+    },
+
+    "复核申请": { n:14, t:"11·14 事故复核申请（周德海）", body:
+      '<p>一份手写的申请，是周德海递上去的。</p>'+
+      '<div class="folder" data-tab="复核申请"><div class="fld-no">3J-1998-REVIEW · 1998 年 6 月</div>'+
+      '<div class="fld-line"><strong>申请人：</strong>周德海（安全科）</div>'+
+      '<div class="fld-line"><strong>事由：</strong>申请复核 1996 年 11 月 14 日三车间事故的原因认定。</div>'+
+      '<div class="fld-line">一、涉事铣床在技改前连续异响，本人曾于 11 月 9 日、11 月 12 日报修，有<strong>维修台账</strong>为证，均未处理。</div>'+
+      '<div class="fld-line">二、事发时冯桂芝同志系将本人从危险位置推开，属救人之举，并非「违规伸手」。</div>'+
+      '<div class="fld-line">三、本人本无责，而救人者担责；报告之认定，与事实不符。</div>'+
+      '<div class="fld-line">四、当年为配合创优评级，事故材料被压下未予复核，本人亦未坚持，愿一并检讨。</div>'+
+      '<div class="fld-line">以上情况，恳请厂里重新认定。</div></div>'+
+      '<p>申请写的第 1 条里，藏着一个关键——那本能作证的东西。周德海说，它一直在。</p>'
+    },
+
+    /* ---------- 第三层 · 台账与密码 ---------- */
+    "维修台账": { n:15, t:"三车间维修台账（1996 年 11 月）", gate:
+      { label:"请输入本卷台账的编号", hint:"台账归在冯桂芝名下。资料室按「工龄」给卷宗编序号——她入厂那一年，到出事那一年，中间隔了多少年，编号就是多少。", ans:["28","二十八","28年"] }, body:
+      '<p>台账编号对上了。这是一本抄件，纸角卷着，边上有油污指印。</p>'+
+      '<div class="folder" data-tab="三车间 · 维修台账"><div class="fld-no">抄件 · 1996 年 11 月</div>'+
+      '<div class="fld-line">11.09　三号铣床（旧式）异响　报修人：周德海　处理：未处理（待技改一并停用）</div>'+
+      '<div class="fld-line">11.12　三号铣床（旧式）异响加剧　报修人：周德海　处理：未处理（同上）</div>'+
+      '<div class="fld-line">11.14　三号铣床运转中伤人　处理：事故，停机</div>'+
+      '<div class="fld-line" style="font-size:12px;color:#7c6a48;">附注：前两笔报修均有回执存根，未见处理签字。</div></div>'+
+      '<p>两次报修，白纸黑字。机器在响，报修单递上去，压在「等技改」三个字下面。到了 11 月 14 日夜里，它终于响了那一声。</p>'+
+      '<p>人是怎么伤的，报告里有写。可伤到什么程度，得看医院的鉴定。</p>'
+    },
+
+    "工伤鉴定": { n:16, t:"工伤鉴定与伤残补助登记", body:
+      '<p>一份薄薄的登记表，夹在后勤仓库的劳保卷里。</p>'+
+      '<div class="folder" data-tab="劳保登记"><div class="fld-no">3J-1997-0310</div>'+
+      '<div class="fld-line">姓名：冯桂芝　工种：铣工（1997.01 调后勤仓库）</div>'+
+      '<div class="fld-line">伤情：1996.11.14 三车间事故致右手掌裂伤，缝合十一针。</div>'+
+      '<div class="fld-line">鉴定：右手功能受限，评定为<strong>十级伤残</strong>。</div>'+
+      '<div class="fld-line">补助：自 1997 年 3 月起按月发放伤残补助。</div>'+
+      '<div class="fld-line" style="font-size:12px;color:#7c6a48;">附注：本表由后勤仓库代填，本人签字处，按的是一枚手印。</div></div>'+
+      '<p>十级伤残，按的是手印。她那只拿了几十年铣刀的手，签不出名字了。</p>'+
+      '<p>档案里，还留着一份按当年「违规」定调、要求她本人写的检查。</p>'
+    },
+
+    "检查": { n:17, t:"个人检查（冯桂芝）", body:
+      '<p>一份「个人检查」，是当年按「违规」的调子要求她写的。字迹很轻，像是不太情愿按在那张纸上。</p>'+
+      '<div class="hand">'+
+      '<p><span class="acro">另</span>起炉灶的话，我不说。上面怎么定，我就怎么认。</p>'+
+      '<p><span class="acro">有</span>些话，说出来也没人听，不如咽下去。</p>'+
+      '<p><span class="acro">复</span>写的这一页，我没交上去。</p>'+
+      '<p><span class="acro">本</span>不该留，可我总想着，说不定哪天，有人要看见。</p>'+
+      '</div>'+
+      '<p>她写得很配合，认了。可这份检查里，有一件东西不太对——每一段的头一个字，比别的字都大一圈。竖着读一遍，她真正想说的，是另一句话。</p>'
+    },
+
+    "副本": { n:18, t:"周德海私存的副本（目录）", body:
+      '<p>周德海把当年经手的材料，一件件复写、留底，藏在一个铁皮盒里。盒盖内侧贴着一张目录。</p>'+
+      '<table class="ledger"><tr><th>序</th><th>材料</th><th>原编号</th></tr>'+
+      '<tr><td>一</td><td>事故报告 复本</td><td>3J-1996-0114</td></tr>'+
+      '<tr><td>二</td><td><span class="ring">维修台账</span> 复本</td><td>3J-1996-1120</td></tr>'+
+      '<tr><td>三</td><td>调令 复本</td><td>3J-1997-0125</td></tr>'+
+      '<tr><td>四</td><td><span class="ring">现场草图</span></td><td>—</td></tr>'+
+      '<tr><td>五</td><td><span class="ring">领料单</span> 存根</td><td>3J-1996-1109</td></tr>'+
+      '<tr><td>六</td><td>同班组 值班表</td><td>—</td></tr></table>'+
+      '<p>目录末尾，是周德海自己写的一行小字：</p>'+
+      '<div class="hand">「怕人翻，我不敢把话说全。你把这上面圈住的三样，各取头一个字，再把它们的拼音头一个字母连起来——那就是那天夜里，站在机器边上、替我证明的那个人的名字。她在荣誉墙上出现过两次。」</div>'+
+      '<p>圈住的三样：维修（W）、现场（X）、领料（L）。三个首字母连起来是 <span class="mono"><strong>W X L</strong></span>。回到名誉墙那串名字里去对一对，谁的名字，头三个字正好对得上。</p>'
+    },
+
+    "王秀兰": { n:19, t:"王秀兰的证言", body:
+      '<p>王秀兰，女，当年三车间记工员。1996 年 11 月 14 日夜里，她也当班。她留下一张纸，前半段是白话，后半段却换成了一串字母。</p>'+
+      '<div class="hand">'+
+      '我那天在。夜里的事，我都看见了。<br>'+
+      '后来的话，不是我们这些干活的人能说的。<br>'+
+      '本来该说的那个词，他们不让写在纸上，我就写成了这样——<br><br>'+
+      '<span class="mono" style="font-size:17px;letter-spacing:.14em;"><strong>F K X D Q J B R X</strong></span>'+
+      '</div>'+
+      '<p style="font-size:13px;color:#5a4b35;">纸角上还留着一行小字：「按厂里内部的写法，三车间的代号，往后错三位。」——把每个字母往前数三位，会得到一串拼音；读出来，就是他们那年年年挂在嘴边、却不肯正经写在纸上的那个词。</p>'
+    },
+
+    "创优": { n:20, t:"1996 年度「创优评级」考核办法", body:
+      '<p>一份考核办法，附着一张当年厂办连夜开会留下的便签。</p>'+
+      '<div class="folder" data-tab="厂办 · 考核办法"><div class="fld-no">3J-1996-1108</div>'+
+      '<div class="fld-line">考核项目：产量、质量、成本、<strong>安全</strong>、纪律。</div>'+
+      '<div class="fld-line">其中「安全无事故」为<strong>一票否决</strong>项：全厂当年发生重伤及以上事故的，本年度评级不得进档。</div>'+
+      '<div class="fld-line">评级结果直接关系全厂年终奖金与来年技改指标。</div></div>'+
+      '<div class="hand" style="font-size:14px;">11.15 凌晨，厂办紧急会。结论：事故按「操作违规」上报，责任落实到个人，不扩大。<br>——全厂在册职工四千余人，年底的奖金不能黄。三车间照常上班。</div>'+
+      '<p>到这里，「为什么必须把它抹掉」就有了答案：不是谁坏，是那年整座厂子都指望着年底那一档评级。出了事故，几千人的奖金就没了着落。所以得出一个人来，认下这一条。</p>'
+    },
+
+    "奖金": { n:21, t:"厂办紧急会议记录（1996.11.15）", body:
+      '<p>一页会议记录，钢笔字，几处涂改。出席和决议都写得极简。</p>'+
+      '<div class="folder" data-tab="厂办会议记录"><div class="fld-no">1996 年 11 月 15 日 · 凌晨</div>'+
+      '<div class="fld-line"><strong>出席：</strong>厂长、书记、厂办、安全科、三车间。</div>'+
+      '<div class="fld-line"><strong>决议一：</strong>事故按「操作违规」上报，责任落实到个人，不扩大、不外传。</div>'+
+      '<div class="fld-line"><strong>决议二：</strong>涉事材料封存老档案室，不随年度卷宗移交。</div>'+
+      '<div class="fld-line"><strong>决议三：</strong>三车间夜班照常，确保年底创优评级不受影响。</div>'+
+      '<div class="fld-line" style="font-size:12px;color:#7c6a48;">列席人签名处，有「周德海」三个字，后面被划掉——他当时只是列席，没有表决权。</div></div>'+
+      '<p>一场会，三条决议，把一整件事按了下去。材料「封存，不随年度卷宗移交」——所以它才会在老档案室里，一躺就是二十多年。</p>'+
+      '<p>那份被划掉名字的封存卷宗，后来按流程封了口。</p>'
+    },
+
+    "封存": { n:22, t:"老档案室 · 封存卷宗", gate:
+      { label:"请输入封条密码", hint:"封条上印着一句话：「锁住那一天。」把出事那一天的月和日，连成四位数字，就是锁的密码。", ans:["1114","11.14","11月14日","十一月十四","11月14"] }, body:
+      '<p>锁开了。一个牛皮纸卷宗，封条已经发脆，一碰就掉。</p>'+
+      '<div class="folder" data-tab="封存卷宗"><div class="fld-no">3J-1996-0114 · 全套</div>'+
+      '<div class="fld-line">一、11·14 事故报告（原件）</div>'+
+      '<div class="fld-line">二、三车间维修台账（原件）</div>'+
+      '<div class="fld-line">三、现场草图（周德海绘）</div>'+
+      '<div class="fld-line">四、周德海 复核申请（1998）</div>'+
+      '<div class="fld-line">五、王秀兰 证言（1998）</div>'+
+      '<div class="fld-line" style="font-size:12px;color:#7c6a48;">封皮上一行字：「待补录。」另有一枚 2019 年的馆章。</div></div>'+
+      '<p>「待补录」三个字，是 2019 年才写上去的。也就是说，这卷封存了二十多年的材料，终于被人打开过、看过、并且决定要做点什么。</p>'+
+      '<p>是谁打开的，馆里留了记录。</p>'
+    },
+
+    "馆员手记": { n:23, t:"2019 建馆清理手记", body:
+      '<p>厂史馆馆员的工作手记，2019 年 3 月那几页。</p>'+
+      '<div class="hand">'+
+      '整理老档案室，翻到一卷封存的材料，编号 3J-1996-0114。<br>'+
+      '按流程本该登记，却发现借阅登记簿上，它从 1997 年起，被同一个人反复借出，最后一次记录是 2015 年停产前。<br>'+
+      '材料很全：报告、台账、草图、复核申请、还有一份手写的证言。证言最后写着：「我说的都是真话，那天夜里，她把人推开了。」<br><br>'+
+      '2019 年 3 月，一位年迈的老人来到馆里，从布包里取出一沓复本，说：<br>'+
+      '「原件你们有，复本在我这儿，该还给厂里了。」<br>'+
+      '老人姓周。'+
+      '</div>'+
+      '<p>那位老人来了，还留下了联系方式。来访登记簿上，应该能找到他。</p>'
+    },
+
+    "来访登记": { n:24, t:"来访登记簿（2019）", body:
+      '<p>厂史馆开馆后的第一本来访登记簿。</p>'+
+      '<table class="ledger"><tr><th>日期</th><th>姓名</th><th>事由</th></tr>'+
+      '<tr><td>2019.03.06</td><td>周德海</td><td>交还资料</td></tr></table>'+
+      '<p>留言栏里，他写了一小段话：</p>'+
+      '<div class="hand">'+
+      '冯师傅 2005 年就走了，没等到一句回话。她还活着的时候，一直说没关系。<br>'+
+      '我替她不平，可我也老了。材料你们收下吧。<br>'+
+      '请你们，替她把这一页补上。'+
+      '</div>'+
+      '<p>登记簿的最后，夹着一个没贴邮票的信封，信封上写着「厂部」。信没有拆——老人说，这是他替别人写的，交给馆里留个凭据就好。</p>'
+    },
+
+    "未寄出": { n:25, t:"周德海未寄出的信", body:
+      '<p>信封没贴邮票，收信人写的是「厂部」。信纸很旧，字迹抖，一笔一顿。</p>'+
+      '<div class="hand" style="font-size:15.5px;">'+
+      '厂领导：<br><br>'+
+      '我叫周德海，安全科的，退休多年了。<br><br>'+
+      '1996 年 11 月 14 日夜里，三车间那台旧铣床响了，冯桂芝同志把我推开，自己伤了手。报告上写她违规。不是的。<br>'+
+      '那台机器，我报了两次修，没人理。那年全厂要评优，她跟我说，她认了，让我别记。<br>'+
+      '可我记了二十多年，一天都没敢忘。<br><br>'+
+      '我不为别的，只想替她要回一个<span class="hl" style="font-size:1.1em;"><strong>清白</strong></span>。<br>'+
+      '她走的时候，我没能替她说上话。<br>'+
+      '现在把材料交给厂史馆，就算替她，说了。'+
+      '<br><br><span style="text-align:right;display:block;">—— 周德海</span>'+
+      '</div>'+
+      '<p style="font-size:13px;color:#5a4b35;">（提示：信里他反复惦记的、想替她要回的那两个字，就是最后一把钥匙。）</p>'
+    },
+
+    "清白": { n:26, t:"全站已解密 · 结局", body:
+      '<p>你在检索框里敲下了那两个字。本站最后一次翻页，安静得像一个人终于松了口气。</p>'+
+      '<div class="note"><b>那个人是谁。</b><br>'+
+      '冯桂芝，一九五〇年生，一九六八年进厂，三车间铣工，八级工，夜班带班。她带过十七个徒弟，其中一个是安全科的周德海。一九八八、一九九一、一九九五，她三次被评为先进工作者。荣誉墙上，她的名字曾经烫金。</div>'+
+      '<div class="note"><b>一九九六年那夜，到底发生了什么。</b><br>'+
+      '那年 11 月，厂里对三车间实施设备更新。三号铣床早就响了好些天——周德海在 11 月 9 日、11 月 12 日两次报修，都被一句「等技改一起停」压了下去。11 月 14 日夜班，机器响声越来越大，周德海伸手去够进给手柄，冯桂芝从侧面一把把他推开。他的手保住了，她的右手掌被工件划开，缝了十一针，后来落成十级伤残。<br>'+
+      '而事故报告上写的却是：「冯桂芝在设备运转中违规伸手，负主要责任。」——救人，被写成了犯错。</div>'+
+      '<div class="note"><b>为什么它必须被抹掉。</b><br>'+
+      '因为那一年的年底，全厂正在评「创优评级」。考核表上，「安全无事故」是一票否决：出了重伤事故，评级进不了档，全厂四千多人的年终奖金就没了着落。<br>'+
+      '11 月 15 日凌晨，厂办连夜开会，三条决议：事故按「操作违规」上报，责任落实到个人，不扩大；涉事材料封存老档案室，不随年度卷宗移交；三车间夜班照常，评级不受影响。<br>'+
+      '于是，需要一个「责任人」。冯桂芝是最合适的那一个——她受了伤，也最沉默。</div>'+
+      '<div class="note"><b>谁在瞒，她又为什么不喊。</b><br>'+
+      '瞒的是厂里：压下报告、封存材料、把她的名字从先进名单里划掉，一纸调令把她从三车间调去了后勤仓库。<br>'+
+      '可真正让这件事安静下来的，还有她自己。她跟周德海说：「你还年轻，别记这个。」她按当年的调子写了一份检查，认了。她要的从来不多——家属那封信里也只写了一句：只求厂里能还她一个清白，哪怕就写在纸上。</div>'+
+      '<div class="note"><b>后来怎样。</b><br>'+
+      '周德海记了二十多年。从 1997 年起，他一遍遍借出那卷事故材料；1998 年，他递上复核申请，同年，冯桂芝的母亲和女儿写了信。可那些年，厂子在改制、在搬迁、在停产，没有人再翻这笔旧账。<br>'+
+      '二〇〇五年，冯桂芝走了，到底没等到一句回话。<br>'+
+      '二〇一五年，厂区停用；二〇一九年，厂史馆在原址建起来。年迈的周德海把复本交了出去，留下四个字：请你们，替她把这一页补上。</div>'+
+      '<div class="cert">'+
+      '<div class="ct-h">先 进 工 作 者</div>'+
+      '<div class="ct-b">兹补录 <b>冯桂芝</b> 同志为 1996 年度先进工作者。<br>一九九六年十一月十四日，她推开的，不只是一个人。</div>'+
+      '<div class="ct-s">国营第三机床厂厂史馆 · 二〇一九年补录 · 编号 SC-2019-CERT-01</div>'+
+      '<div class="ct-seal">厂史馆<br>补录</div>'+
+      '</div>'+
+      '<p>荣誉墙上，1996 年那一格不再是空的了。名字补上去，很小，很端正。厂志里那被裁去的一页，也补了回来——不是原件，是有人一个字一个字，替它等了二十多年。</p>'+
+      '<p>你合上这一页，忽然明白扉页上那句话的意思：「问一问他。他还在这厂里。」那个「他」，不是冯桂芝——是写下便条、守了二十多年材料、终于把它交到建馆人手里的周德海。</p>'+
+      '<p><b>档案会缺页，可总有人替它记着。</b></p>'+
+      '<p style="text-align:center;margin-top:20px;font-family:\'DM Serif Display\',serif;font-size:18px;color:var(--blue);">—— 全站已解密 · 感谢你替她把那一页补上 ——</p>'
+    }
+  };
+
+  /* ============ 别名（同义 / 常见错别字容错） ============ */
+  var ALIAS = {
+    "机床厂":"第三机床厂","三厂":"第三机床厂","三机":"第三机床厂","三机厂":"第三机床厂","国营第三机床厂":"第三机床厂",
+    "第三车间":"三车间","3车间":"三车间","第3车间":"三车间",
+    "设备更新计划":"设备更新","技改":"设备更新","技术改造":"设备更新",
+    "夜班表":"夜班","轮值表":"夜班","排班":"夜班","夜班轮值":"夜班",
+    "先进":"先进工作者","工作者":"先进工作者","荣誉墙":"先进工作者","先进工作者名录":"先进工作者","劳模":"先进工作者",
+    "取消称号":"除名","处理决定":"除名","除名决定":"除名",
+    "老档案室":"老档案","档案室":"老档案","借阅登记":"老档案","登记簿":"老档案",
+    "周师傅":"周德海","德海":"周德海","安全科":"周德海","周得海":"周德海",
+    "一九九六":"1996","96年":"1996","1996年":"1996",
+    "事故":"事故报告","报告":"事故报告","11·14":"事故报告","114":"事故报告",
+    "调动":"调令","调离":"调令","工作调动":"调令","调令通知":"调令",
+    "冯师傅":"冯桂芝","桂芝":"冯桂芝","冯桂枝":"冯桂芝",
+    "来信":"家属来信","信":"家属来信","家属的信":"家属来信",
+    "复核":"复核申请","申请复核":"复核申请",
+    "台账":"维修台账","维修":"维修台账","维修记录":"维修台账",
+    "伤残":"工伤鉴定","伤残补助":"工伤鉴定","工伤":"工伤鉴定","十级伤残":"工伤鉴定",
+    "检查书":"检查","检讨":"检查","个人检查":"检查",
+    "复本":"副本","复写":"副本","私存副本":"副本",
+    "秀兰":"王秀兰","记工员":"王秀兰","王秀兰的证言":"王秀兰",
+    "评级":"创优","创优评级":"创优","评优":"创优","考核办法":"创优",
+    "年终奖":"奖金","年终奖金":"奖金",
+    "封存卷宗":"封存","封条":"封存","卷宗":"封存",
+    "馆员":"馆员手记","手记":"馆员手记","清理手记":"馆员手记",
+    "来访":"来访登记","登记":"来访登记","老人":"来访登记",
+    "未寄出的信":"未寄出","他的信":"未寄出",
+    "还她清白":"清白","讨回清白":"清白","一个清白":"清白"
+  };
+
+  /* ============ 陷阱词（回「未找到」但给暗示） ============ */
+  var TRAPS = {
+    "真相":"本站没有「真相」这个栏目。厂史馆只存一件件具体的东西——报告、台账、便条、信。你要的那个说法，得从它们里头自己拼出来。",
+    "结局":"本站不写结局。对一柜子档案来说，只有「找齐了」和「还没找齐」两种。",
+    "通关":"本站没有通关一说。这里的每一页，都是别人真过过的日子。",
+    "解密":"没有哪一页是加密的。只是有些话，当年的人不敢直着写，你要顺着读。",
+    "凶手":"这里没有凶手。有的只是一台该修没修的机器，和一句不该写进报告的话。",
+    "小偷":"档案不是被偷走的，是被「封存」的。封存它的人，还留了编号。",
+    "鬼":"本站只存文件、照片和奖状，不存这些。夜里响的，是机器。",
+    "灵异":"别往那边想。发生了的事，都写在了纸上，只是有人不肯写全。",
+    "冯桂枝":"字写错了——是「芝」，芝兰的芝。她档案卡上写得很清楚。",
+    "周得海":"字写错了——是「德」，品德的德。老档案室的借阅登记簿上，是他的名字。",
+    "宋广田":"宋广田当过车间主任，可他借阅记录里没有他。反复借那卷材料的，另有其人。",
+    "郑长顺":"郑长顺是老主任了，1985 年的先进。可 1996 年那件事，和他没牵连。",
+    "李文彬":"李文彬的名字在名录上有过，可他不是守着那卷材料的人。",
+    "厂长":"当年的厂长是谁，档案里没留名字。会议记录上，只写了「厂长」两个字。",
+    "警察":"那件事没有报到外面去。厂里自己开的会，自己定的调，自己压下来的。",
+    "法院":"没有打官司。家属要的只是一句话，写在纸上的那种，可这句话等了二十多年。",
+    "补助":"补助两个字太笼统。翻翻后勤仓库的劳保卷，那里有一份伤残登记的。",
+    "医院":"医院的名字档案里也没记。记下的，是「缝合十一针」和「十级伤残」。",
+    "尸体":"不要用这个词。伤的是一只手。她活着带着那只手，过了很多年。"
+  };
+
+  /* ============ 记录本 / 存档 ============ */
+  var SKEY = "jichuangchang_notebook_v1";
+  var state = { pages:{}, keys:[], unlocked:{} };
+  try{
+    var raw = localStorage.getItem(SKEY);
+    if(raw){ var s = JSON.parse(raw); if(s && typeof s==='object'){ state.pages=s.pages||{}; state.keys=s.keys||[]; state.unlocked=s.unlocked||{}; } }
+  }catch(e){}
+  function save(){ try{ localStorage.setItem(SKEY, JSON.stringify(state)); }catch(e){} }
+
+  function norm(s){
+    return (s||'').replace(/[\s'"「」《》·,，。.、:：;；!！?？\-—_（）()]/g,'').trim();
+  }
+  function pad(n){ return (n<10?'0':'')+n; }
+
+  var input=document.getElementById('q');
+  var msg=document.getElementById('msg');
+  var home=document.getElementById('home');
+  var doc=document.getElementById('doc');
+
+  function lookup(raw){
+    var k = norm(raw);
+    if(!k) return null;
+    if(ALIAS[k]) k = ALIAS[k];
+    if(PAGES[k]) return {key:k, page:PAGES[k]};
+    for(var key in PAGES){ if(norm(key)===k) return {key:key, page:PAGES[key]}; }
+    return null;
+  }
+  function findTrap(raw){
+    var k = norm(raw);
+    if(!k) return null;
+    if(TRAPS[k]) return TRAPS[k];
+    for(var key in TRAPS){ if(norm(key)===k) return TRAPS[key]; }
+    return null;
+  }
+
+  function renderDoc(p, key){
+    doc.innerHTML =
+      '<div class="doc">'+
+        '<div class="doc-bar"><span>档案 '+pad(p.n)+' / '+TOTAL+'</span><span>第三机床厂厂史馆 · 隐藏卷宗</span></div>'+
+        '<div class="doc-body">'+
+          '<h2>'+p.t+'</h2><span class="rule"></span>'+
+          p.body+
+          '<div class="pagetag">'+pad(p.n)+' / '+TOTAL+'</div>'+
+          '<button class="backbtn" id="bk">← 返回首页</button>'+
+        '</div>'+
+      '</div>';
+    document.getElementById('bk').onclick = showHome;
+  }
+
+  function renderGate(p, key){
+    doc.innerHTML =
+      '<div class="doc">'+
+        '<div class="doc-bar"><span>档案 '+pad(p.n)+' / '+TOTAL+'</span><span>受限卷宗 · 需验证</span></div>'+
+        '<div class="doc-body">'+
+          '<h2>'+p.t+'</h2><span class="rule"></span>'+
+          '<p><span class="locked-tag">此卷已封存</span></p>'+
+          '<p>这一卷被锁住了。要翻开它，得先输入档案上要求的编号。</p>'+
+          '<div class="gate">'+
+            '<label>'+p.gate.label+'</label>'+
+            '<div class="srow"><input id="gi" type="text" autocomplete="off" placeholder="在这里输入……"><button id="gk">确认</button></div>'+
+            '<div class="gmsg" id="gmsg"></div>'+
+            '<div class="ghint">线索：'+p.gate.hint+'</div>'+
+          '</div>'+
+          '<button class="backbtn" id="bk">← 返回首页</button>'+
+        '</div>'+
+      '</div>';
+    var gi = document.getElementById('gi');
+    var gm = document.getElementById('gmsg');
+    function tryGate(){
+      var v = norm(gi.value);
+      var ok = p.gate.ans.some(function(a){ return norm(a)===v; });
+      if(ok){
+        state.unlocked[key] = true;
+        state.pages[key] = p.n;
+        save(); refreshNotebook();
+        gm.className='gmsg'; gm.textContent='编号正确，封条揭开，正在翻开……';
+        setTimeout(function(){ renderDoc(p, key); }, 500);
+      }else{
+        gm.className='gmsg bad'; gm.textContent='编号不对。锁没有开。';
+      }
+    }
+    document.getElementById('gk').onclick = tryGate;
+    gi.addEventListener('keydown', function(e){ if(e.key==='Enter') tryGate(); });
+    document.getElementById('bk').onclick = showHome;
+  }
+
+  function showHome(){
+    doc.classList.remove('on');
+    home.classList.add('on');
+    window.scrollTo(0,0);
+  }
+
+  function showPage(key){
+    var p = PAGES[key];
+    if(!p) return;
+    if(p.gate && !state.unlocked[key]){
+      renderGate(p, key);
+    }else{
+      renderDoc(p, key);
+      state.pages[key] = p.n;
+      save(); refreshNotebook();
+    }
+    home.classList.remove('on');
+    doc.classList.add('on');
+    window.scrollTo(0,0);
+  }
+
+  function submit(){
+    var raw = input.value;
+    if(!norm(raw)){ msg.textContent='请输入要检索的内容。'; msg.className='msg bad'; return; }
+    input.value='';
+    var hit = lookup(raw);
+    if(hit){
+      if(state.keys.indexOf(norm(raw))<0){ state.keys.push(norm(raw)); if(state.keys.length>40) state.keys.shift(); }
+      msg.textContent='检索到 1 条结果，正在打开……';
+      msg.className='msg';
+      showPage(hit.key);
+      setTimeout(function(){ msg.textContent=''; }, 2200);
+      return;
+    }
+    var trap = findTrap(raw);
+    if(trap){
+      if(state.keys.indexOf(norm(raw))<0){ state.keys.push(norm(raw)); if(state.keys.length>40) state.keys.shift(); }
+      save(); refreshNotebook();
+      msg.innerHTML='未找到相关内容。<br>'+trap;
+      msg.className='msg bad';
+      return;
+    }
+    msg.textContent='未找到相关内容。';
+    msg.className='msg bad';
+  }
+
+  document.getElementById('go').onclick = submit;
+  input.addEventListener('keydown', function(e){ if(e.key==='Enter') submit(); });
+
+  /* ============ 记录本 UI ============ */
+  var nbPanel=document.getElementById('nbPanel');
+  var nbOverlay=document.getElementById('nbOverlay');
+  var nbCount=document.getElementById('nbCount');
+  var nbPages=document.getElementById('nbPages');
+  var nbKeys=document.getElementById('nbKeys');
+
+  function refreshNotebook(){
+    var arr=[];
+    for(var k in state.pages){ arr.push({k:k, n:state.pages[k]}); }
+    arr.sort(function(a,b){ return a.n-b.n; });
+    nbCount.textContent = arr.length;
+    if(!arr.length){
+      nbPages.innerHTML='<li style="color:#7a6a4a;">还没有翻到任何一页。</li>';
+    }else{
+      nbPages.innerHTML = arr.map(function(o){
+        return '<li><span>'+ PAGES[o.k].t +'</span><span class="num">'+ pad(o.n) +' / '+TOTAL+'</span></li>';
+      }).join('');
+    }
+    if(!state.keys.length){
+      nbKeys.innerHTML='<li style="color:#7a6a4a;">还没有检索过。</li>';
+    }else{
+      nbKeys.innerHTML = state.keys.slice().reverse().map(function(k){
+        return '<li><span>'+ k +'</span><span class="num">已试</span></li>';
+      }).join('');
+    }
+  }
+
+  function openNb(){ nbPanel.classList.add('open'); nbOverlay.classList.add('on'); }
+  function closeNb(){ nbPanel.classList.remove('open'); nbOverlay.classList.remove('on'); }
+  document.getElementById('nbTab').onclick = openNb;
+  document.getElementById('nbClose').onclick = closeNb;
+  nbOverlay.onclick = closeNb;
+  document.getElementById('nbKill').onclick = function(){
+    if(window.confirm('确定要擦掉这本记录吗？已找到的档案与关键词都会被清空。')){
+      state = { pages:{}, keys:[], unlocked:{} };
+      save(); refreshNotebook();
+      msg.textContent='记录已清空。'; msg.className='msg';
+    }
+  };
+
+  refreshNotebook();
+
+  /* ============ 支持 #pN 直达（便于截图 / 分享） ============ */
+  function openFromHash(){
+    var m = (location.hash||'').replace('#','').match(/^p?(\d+)$/i);
+    if(!m) return;
+    var n = parseInt(m[1],10);
+    for(var k in PAGES){ if(PAGES[k].n===n){ showPage(k); return; } }
+  }
+  window.addEventListener('load', openFromHash);
+})();
+</script>
+<a href="guide.html" class="guideTab" aria-label="查看攻略">攻略</a>
+<style>
+.guideTab{position:fixed;left:10px;bottom:12px;z-index:1000;font-family:"Bungee","Space Mono",monospace;font-size:12px;letter-spacing:.08em;color:#fff;background:var(--blue,#26478f);text-decoration:none;line-height:1;padding:11px 13px;border:2px solid var(--ink,#241c14);box-shadow:3px 3px 0 var(--ink,#241c14);opacity:.9;transition:opacity .15s,transform .15s,box-shadow .15s}
+.guideTab:hover{opacity:1;transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink,#241c14)}
+.guideTab:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink,#241c14)}
+</style>
+</body>
+</html>

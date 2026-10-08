@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第三机床厂 · 攻略</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Mono:wght@400;700&family=Bungee&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#cf3a30;--yellow:#e8b62c;--blue:#26478f;--purple:#6b3fa0;--olive:#6f7b3b;--ink:#2a2318;--paper:#f3ead7;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Space Mono',ui-monospace,monospace;
+    background-image:repeating-linear-gradient(0deg,rgba(42,35,24,.03) 0 2px,transparent 2px 6px);}
+  .wrap{max-width:760px;margin:0 auto;padding:26px 18px 60px}
+  h1{font-family:'Bungee',cursive;font-size:clamp(26px,6vw,46px);margin:0 0 4px;color:var(--blue);
+     text-shadow:3px 3px 0 var(--yellow);line-height:1.05}
+  .sub{font-family:'DM Serif Display',serif;color:var(--red);font-size:15px;margin:0 0 18px}
+  .nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+  a.btn{display:inline-block;font-weight:700;font-size:13px;padding:8px 13px;border:3px solid var(--ink);
+    text-decoration:none;color:#fff;background:var(--blue);box-shadow:3px 3px 0 var(--ink)}
+  a.btn.alt{background:#fff;color:var(--ink)}
+  h2{font-family:'DM Serif Display',serif;font-size:22px;margin:28px 0 10px;padding:6px 10px;border:3px solid var(--ink);
+     display:inline-block;background:var(--yellow);box-shadow:4px 4px 0 var(--ink)}
+  table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border:3px solid var(--ink)}
+  th,td{border:1px solid #b9ad95;padding:6px 8px;text-align:left}
+  th{background:var(--ink);color:#fff;font-weight:700}
+  tr:nth-child(even) td{background:#faf5ea}
+  code{background:#eadfc6;padding:1px 6px;border:1px solid #b9ad95;font-weight:700}
+  .box{background:#fff;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:14px 16px;margin:12px 0;
+    font-size:13px;line-height:1.9}
+  .box.hl{background:rgba(38,71,143,.08);border-color:var(--blue)}
+  .chain{font-size:13px;line-height:2;background:#fff;border:3px dashed var(--ink);padding:12px 14px;word-break:break-all}
+  .cipher{font-family:'Space Mono',monospace;letter-spacing:3px;background:#2a2318;color:#e8b62c;padding:8px 12px;
+    display:inline-block;border:3px solid var(--ink)}
+  .foot{margin-top:34px;font-size:12px;color:#7a6f5c;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>第三机床厂<br>攻略</h1>
+  <p class="sub">关键词 · 两道密码门 · 凯撒密码 · 首字母映射 · 通关链</p>
+  <div class="nav">
+    <a class="btn" href="index.html">◀ 回到游戏</a>
+  </div>
+
+  <div class="box">
+    玩法：在搜索框里输入关键词 / 数字 / 密码。每页页脚是「编号 / 26」，数字越大越接近真相。
+    没头绪时，先在搜索框输入 <code>第三机床厂</code>。
+  </div>
+
+  <h2>一、关键词总表（26 页）</h2>
+  <table>
+    <tr><th>页</th><th>输入</th><th>页</th><th>输入</th></tr>
+    <tr><td>01</td><td><code>第三机床厂</code></td><td>14</td><td><code>复核申请</code></td></tr>
+    <tr><td>02</td><td><code>三车间</code></td><td>15</td><td><code>维修台账</code> ⛔ 密码 <code>28</code></td></tr>
+    <tr><td>03</td><td><code>设备更新</code></td><td>16</td><td><code>工伤鉴定</code></td></tr>
+    <tr><td>04</td><td><code>夜班</code></td><td>17</td><td><code>检查</code></td></tr>
+    <tr><td>05</td><td><code>先进工作者</code></td><td>18</td><td><code>副本</code></td></tr>
+    <tr><td>06</td><td><code>除名</code></td><td>19</td><td><code>王秀兰</code></td></tr>
+    <tr><td>07</td><td><code>老档案</code></td><td>20</td><td><code>创优</code></td></tr>
+    <tr><td>08</td><td><code>周德海</code></td><td>21</td><td><code>奖金</code></td></tr>
+    <tr><td>09</td><td><code>1996</code></td><td>22</td><td><code>封存</code> ⛔ 密码 <code>1114</code></td></tr>
+    <tr><td>10</td><td><code>事故报告</code></td><td>23</td><td><code>馆员手记</code></td></tr>
+    <tr><td>11</td><td><code>调令</code></td><td>24</td><td><code>来访登记</code></td></tr>
+    <tr><td>12</td><td><code>冯桂芝</code></td><td>25</td><td><code>未寄出</code></td></tr>
+    <tr><td>13</td><td><code>家属来信</code></td><td>26</td><td><code>清白</code> → 结局</td></tr>
+  </table>
+
+  <h2>二、两道密码门（要“算”出数字）</h2>
+  <div class="box">
+    · 第 15 页「维修台账」：线索给「1996 − 入厂 1968」＝厂龄 → 输入 <code>28</code><br>
+    · 第 22 页「封存卷宗」：输入事故的日子 11 月 14 日 → <code>1114</code>
+  </div>
+
+  <h2>三、凯撒密码（第 19 页）</h2>
+  <div class="box">
+    页面上有一段密文，提示是「三车间代号，往后错三位」（每个字母往前移 3 位）：<br>
+    <span class="cipher">F K X D Q J B R X</span><br>
+    逐字前移 3 位 → <code>chuangyou</code>（拼音）→ 得到关键词 <b>创优</b>
+  </div>
+
+  <h2>四、首字母映射（第 18 页）</h2>
+  <div class="box">
+    「先进工作者名录」里被圈住的三个字：维修（W）、现场（X）、领料（L）→ <b>W · X · L</b><br>
+    拿这串首字母去名录里对 → 得到人名 <b>王秀兰</b>
+  </div>
+
+  <h2>五、机关（藏在字里的线索）</h2>
+  <div class="box">
+    · 第 17 页「检查书」：四段的<b>头一个字</b>竖着读 →「<b>另有复本</b>」（指向“副本”）
+  </div>
+
+  <h2>六、通关链</h2>
+  <div class="chain">
+    第三机床厂 → 三车间 → 设备更新 → 夜班 → 先进工作者 → 除名 → 老档案 → 周德海 → 1996
+    → 事故报告 → 调令 → 冯桂芝 → 家属来信 → 复核申请 → 维修台账[<b>28</b>] → 工伤鉴定 → 检查
+    → 副本 → 王秀兰[凯撒] → 创优 → 奖金 → 封存[<b>1114</b>] → 馆员手记 → 来访登记 → 未寄出
+    → <b>清白</b>（结局）
+  </div>
+
+  <div class="box hl">
+    <b>结局词</b>：最后一封信里，周德海写道「只想替她要回一个<b>清白</b>」——搜 <code>清白</code> 进入结局。
+  </div>
+
+  <p class="foot">搜「真相 / 结局 / 通关 / 解密」会回一句误导，不给答案。</p>
+</div>
+</body>
+</html>
